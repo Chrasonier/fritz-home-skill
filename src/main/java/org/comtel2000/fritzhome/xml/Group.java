@@ -53,7 +53,8 @@ import javax.xml.bind.annotation.XmlType;
     "present",
     "name",
     "_switch",
-    "groupinfo"
+    "groupinfo",
+	"temperature"
 })
 @XmlRootElement(name = "group")
 public class Group {
@@ -63,6 +64,7 @@ public class Group {
     protected String name;
     @XmlElement(name = "switch")
     protected Switch _switch;
+	 protected Temperature temperature;
     @XmlElement(required = true)
     protected Group.Groupinfo groupinfo;
     @XmlAttribute(name = "identifier")
@@ -310,6 +312,31 @@ public class Group {
         this.productname = value;
     }
 
+	
+	/**
+     * Gets the value of the temperature property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Temperature }
+     *     
+     */
+    public Temperature getTemperature() {
+        return temperature;
+    }
+
+    /**
+     * Sets the value of the temperature property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Temperature }
+     *     
+     */
+    public void setTemperature(Temperature value) {
+        this.temperature = value;
+    }
+	
 
     /**
      * <p>Java class for anonymous complex type.
